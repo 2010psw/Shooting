@@ -62,9 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\04.Scripts\FireControl.cs" />
     <Compile Include="Assets\04.Scripts\JoyStick.cs" />
     <Compile Include="Assets\04.Scripts\JoyStickMovement.cs" />
     <Compile Include="Assets\04.Scripts\MoveBackground.cs" />
+    <Compile Include="Assets\04.Scripts\MoveCtrl.cs" />
     <Compile Include="Assets\04.Scripts\PlayerCtrl.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/2010p/OneDrive/바탕 화면/Shooting/Shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

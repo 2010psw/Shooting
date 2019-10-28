@@ -9,11 +9,12 @@ public class PlayerCtrl : MonoBehaviour
     Rigidbody2D rb;
     public float speed = 10.0f;
     public Transform tr;
-
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
+        
     }
     
     void Update()
@@ -35,11 +36,16 @@ public class PlayerCtrl : MonoBehaviour
         if (p.y < 0.03f) p.y = 0.03f;
         if (p.y > 0.96f) p.y = 0.96f;
         tr.position = Camera.main.ViewportToWorldPoint(p);
-        
+
+        if (JoyStickMovement.Instance.touchNow)
+            //화면 터치중이면 총알 발사
+        {
+            shot();
+        }
 
     }
     void shot()
     {
-
+        //Debug.Log("발사!");
     }
 }

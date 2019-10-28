@@ -29,16 +29,19 @@ public class JoyStickMovement : MonoBehaviour
     public Vector3 joyVec;
     float stickRadius;
     Vector3 joyStickFirstPosition;
+    public bool touchNow;
     void Start()
     {
         stickRadius = bGStick.gameObject.GetComponent<RectTransform>().sizeDelta.y / 2;
         joyStickFirstPosition = bGStick.transform.position;
+        touchNow = false;
     }
     public void PointDown()
     {
         bGStick.transform.position = Input.mousePosition;
         smallStick.transform.position = Input.mousePosition;
         stickFirstPosition = Input.mousePosition;
+        touchNow = true;
     }
     public void Drag( BaseEventData baseEventData)
     {
@@ -62,5 +65,6 @@ public class JoyStickMovement : MonoBehaviour
         joyVec = Vector3.zero;
         bGStick.transform.position = joyStickFirstPosition;
         smallStick.transform.position = joyStickFirstPosition;
+        touchNow = false;
     }
 }

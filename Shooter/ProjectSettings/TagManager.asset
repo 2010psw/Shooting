@@ -13,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerFlight
+  - PBullet
+  - EnemyFlight
+  - EBullet
   - 
   - 
   - 

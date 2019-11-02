@@ -13,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - PlayerFlight
+  - Player
   - PBullet
-  - EnemyFlight
-  - EBullet
-  - 
-  - 
+  - PlayerDamaged
+  - Enemy
+  - EnemyBullet
+  - Item
   - 
   - 
   - 

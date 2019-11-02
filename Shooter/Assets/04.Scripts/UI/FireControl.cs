@@ -17,14 +17,18 @@ public class FireControl : MonoBehaviour
         checkTime = 0.1f;  //공격속도 제한
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         timeSpan += Time.deltaTime;  // 경과 시간을 계속 등록
         if (timeSpan > checkTime)  // 경과 시간이 특정 시간이 보다 커졋을 경우
         {
-            fire();
-            timeSpan = 0;
+            if (PlayerCtrl.Instance.ctrl==true)
+            {
+                fire();
+                timeSpan = 0;
+
+            }
         }
 
     }
@@ -36,7 +40,6 @@ public class FireControl : MonoBehaviour
             for (int i = 0; i<pos.Length; i++)
             {
                 Instantiate(bullet, pos[i].transform.position, pos[i].transform.rotation);
-                Debug.Log("발사");
             }
         }
         

@@ -65,16 +65,15 @@
     <Compile Include="Assets\04.Scripts\Enemy\ChaseMe.cs" />
     <Compile Include="Assets\04.Scripts\Enemy\FireCtrl.cs" />
     <Compile Include="Assets\04.Scripts\Enemy\MoveDown.cs" />
-    <Compile Include="Assets\04.Scripts\Enemy\test.cs" />
     <Compile Include="Assets\04.Scripts\MoveCtrl.cs" />
     <Compile Include="Assets\04.Scripts\RespawnManager.cs" />
     <Compile Include="Assets\04.Scripts\UI\BulletDetect.cs" />
     <Compile Include="Assets\04.Scripts\UI\FireControl.cs" />
+    <Compile Include="Assets\04.Scripts\UI\GameManager.cs" />
     <Compile Include="Assets\04.Scripts\UI\JoyStick.cs" />
     <Compile Include="Assets\04.Scripts\UI\JoyStickMovement.cs" />
     <Compile Include="Assets\04.Scripts\UI\MoveBackground.cs" />
     <Compile Include="Assets\04.Scripts\UI\PlayerCtrl.cs" />
-    <Compile Include="Assets\04.Scripts\UI\PlayerMovement.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/2010p/OneDrive/바탕 화면/Shooting/Shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

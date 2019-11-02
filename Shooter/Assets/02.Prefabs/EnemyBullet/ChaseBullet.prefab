@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9084824386164816703}
   - component: {fileID: 8264971242396352288}
   - component: {fileID: 2277432978443273}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: ChaseBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tr: {fileID: 3170398224777455038}
-  speed: 1.5
+  speed: 8
+  dir: 5
 --- !u!50 &9084824386164816703
 Rigidbody2D:
   serializedVersion: 4
@@ -118,7 +119,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &8264971242396352288
 CircleCollider2D:

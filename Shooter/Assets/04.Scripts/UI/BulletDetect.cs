@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class BulletDetect : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(this.gameObject);
-    }
+    
 
 }

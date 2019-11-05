@@ -12,4 +12,13 @@ public class MoveDown : MonoBehaviour
     {
         tr.Translate(Vector3.down * speed * Time.deltaTime);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if ((collision.gameObject.layer == 14))//벽 터치
+        {
+            Destroy(this.gameObject);
+        }
+
+    }
 }

@@ -34,6 +34,7 @@ public class PlayerCtrl : MonoBehaviour
     SpriteRenderer sr;
     Animator anim;
     int life = 3;
+    public int level = 0;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -87,7 +88,7 @@ public class PlayerCtrl : MonoBehaviour
             }
             if ((collision.gameObject.layer == 13))//아이템먹음
             {
-
+                levelUP();
             }
         }
     }
@@ -161,6 +162,13 @@ public class PlayerCtrl : MonoBehaviour
         //살아있는상태로 복구(타겟 on)
         Invoke("die", 160 * Time.deltaTime);
     }
-    
+    void levelUP()
+    {
+        if (level<4)
+        {
+            level++;
+        }
+
+    }
 
 }

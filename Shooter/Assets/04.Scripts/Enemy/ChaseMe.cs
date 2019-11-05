@@ -98,4 +98,13 @@ public class ChaseMe : MonoBehaviour
         
        
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if ((collision.gameObject.layer == 14))//벽 터치
+        {
+            Destroy(this.gameObject);
+        }
+
+    }
 }

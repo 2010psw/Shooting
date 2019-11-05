@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireControl : MonoBehaviour
 {
     public GameObject[] pos;
-    public GameObject bullet;
+    public GameObject[] bullet;
 
     
     float timeSpan;  //경과 시간을 갖는 변수
@@ -39,9 +39,12 @@ public class FireControl : MonoBehaviour
            
             for (int i = 0; i<pos.Length; i++)
             {
-                Instantiate(bullet, pos[i].transform.position, pos[i].transform.rotation);
+                Instantiate(bullet[PlayerCtrl.Instance.level], pos[i].transform.position, pos[i].transform.rotation);
             }
         }
         
     }
+   
+
+
 }

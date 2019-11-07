@@ -30,6 +30,7 @@ public class PB_Ctrl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
         setDamage();
+        Invoke("Destroy", 1.2f);
     }
     void setDamage()
     {
@@ -56,5 +57,8 @@ public class PB_Ctrl : MonoBehaviour
 
         }
     }
-
+    void Destroy()
+    {
+        Destroy(this.gameObject);
+    }
 }

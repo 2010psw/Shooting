@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6534e75c8d50548816db630f9f68cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsAmount: 30
+  bulletsAmount: 1
   startAngle: 0
-  endAngle: 360
-  DelayTime: 0.3
-  ptn: 0
+  endAngle: 30
+  DelayTime: 0.1
+  Pattern: 5

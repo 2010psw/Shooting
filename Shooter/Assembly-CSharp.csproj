@@ -77,6 +77,7 @@
     <Compile Include="Assets\04.Scripts\UI\MoveBackground.cs" />
     <Compile Include="Assets\04.Scripts\UI\PB_Ctrl.cs" />
     <Compile Include="Assets\04.Scripts\UI\PlayerCtrl.cs" />
+    <Compile Include="Assets\CircleMoving\example.cs" />
     <Compile Include="Assets\test\Bullet.cs" />
     <Compile Include="Assets\test\BulletPool.cs" />
     <Compile Include="Assets\test\FireBullets.cs" />

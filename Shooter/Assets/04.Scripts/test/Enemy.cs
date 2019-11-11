@@ -40,12 +40,9 @@ public class Enemy : MonoBehaviour
             hp -= PB_Ctrl.Instance.damage;
             if (hp<=0)
             {
-                Debug.Log("몬스터 사망");
-                if (Random.Range(0,100)>90f)//드랍 트루(템 드랍하는놈이면)
-                {
-                    
-                }
+                Debug.Log("죽음");
             }
+            
         }
     }
 }

@@ -7,7 +7,7 @@ public class FireCtrl : MonoBehaviour
     public GameObject[] pos;
     public GameObject bullet;
 
-    public float delayTime = 0.2f;
+    public float delayTime;
     void Start()
     {
         InvokeRepeating("fire", 1.0f, delayTime);

@@ -6,19 +6,35 @@ public class MoveDown : MonoBehaviour
 {
     public Transform tr;
     public float speed = 10f;
-
+    public GameObject obj;
+    Vector3 a = Vector3.down;
 
     void Update()
     {
-        tr.Translate(Vector3.down * speed * Time.deltaTime);
+        tr.Translate(a * speed * Time.deltaTime);
+        Vector3 p = Camera.main.WorldToViewportPoint(tr.position);
+        
+        if (p.y < -0.3f) Destroy(this.gameObject);
+        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Vector3 p = Camera.main.WorldToViewportPoint(tr.position);
 
-        if ((collision.gameObject.layer == 14))//벽 터치
+        if (p.y < 0.95f)
         {
-            Destroy(this.gameObject);
-        }
+            if ((collision.gameObject.layer == 9))//
+            {
+                if (Random.Range(0f, 11f)>8f)
+                {
+                    Instantiate(obj, this.gameObject.transform.position, Quaternion.identity);
 
+                }
+                Destroy(this.gameObject);
+            }
+
+
+        }
     }
 }

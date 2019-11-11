@@ -61,4 +61,11 @@ public class PB_Ctrl : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((collision.gameObject.layer == 11))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

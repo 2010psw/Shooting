@@ -40,7 +40,9 @@ public class FireBullets : MonoBehaviour
             case 4: //회전
                 InvokeRepeating("Fire4", 0f, DelayTime);
                 break;
-
+            default:
+                InvokeRepeating("Fire1", 0f, DelayTime);
+                break;
         }
     }
 

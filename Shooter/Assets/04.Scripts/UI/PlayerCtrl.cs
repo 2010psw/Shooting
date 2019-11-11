@@ -85,6 +85,7 @@ public class PlayerCtrl : MonoBehaviour
                 anim.SetTrigger("PlayerDie");
                 Invoke("MF_Visible", 45 * Time.deltaTime);
                 Invoke("revive", 60 * Time.deltaTime);
+                level = 0;
             }
             if ((collision.gameObject.layer == 13))//아이템먹음
             {
@@ -117,7 +118,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             alive = true;
         }
-        
+            
     }
     void setCtrl()
     {

@@ -6,6 +6,7 @@ public class RespawnManager : MonoBehaviour
 {
     public GameObject obj;
     public Transform respawnTr;
+    public float respawnTime;
     void Start()
     {
         StartCoroutine(RespawnEnemy());
@@ -16,7 +17,7 @@ public class RespawnManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(respawnTime);
             float range = (float)Screen.width / (float)Screen.height * Camera.main.orthographicSize;
             Instantiate(obj, respawnTr.position + new Vector3(Random.Range(-range, range), 0, 0), Quaternion.identity);
         }

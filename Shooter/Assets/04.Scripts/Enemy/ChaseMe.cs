@@ -38,7 +38,10 @@ public class ChaseMe : MonoBehaviour
     {
         
             tr.Translate(a * speed * Time.deltaTime);
+        
+        Vector3 p = Camera.main.WorldToViewportPoint(tr.position);
 
+        if (p.y < -0.3f) Destroy(this.gameObject);
     }
     void setDir(int dir)
     {

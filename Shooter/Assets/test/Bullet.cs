@@ -5,8 +5,15 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Vector2 moveDirection;
+    Rigidbody2D rb;
     public float moveSpeed;
 
+
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     private void Update()
     {
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);

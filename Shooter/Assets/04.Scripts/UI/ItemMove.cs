@@ -5,13 +5,21 @@ using UnityEngine;
 public class ItemMove : MonoBehaviour
 {
     public Transform tr;
-    
+    SpriteRenderer sr;
+    private AudioSource Sound;
+    public AudioClip Sound2;
     Vector3 a;
     float speed = 1.3f;
     
     void Start()
     {
         a = (Vector3.up + Vector3.right)*speed;
+
+        this.Sound = this.gameObject.AddComponent<AudioSource>();
+        this.Sound.clip = this.Sound2;
+        this.Sound.loop = false;
+
+        sr = GetComponent<SpriteRenderer> ();
     }
     void Update()
     {
@@ -26,8 +34,16 @@ public class ItemMove : MonoBehaviour
     {
         if ((collision.gameObject.layer == 8))
         {
-            Destroy(this.gameObject);
+            this.Sound.Play();
+            sr.color = new Color(1, 1, 1, 0);
+            Invoke("delete", 2f);
         }
+
     }
 
+    void delete()
+    {
+        Destroy(this.gameObject);
+
+    }
 }

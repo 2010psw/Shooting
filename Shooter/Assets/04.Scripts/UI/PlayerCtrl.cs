@@ -22,7 +22,7 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
     private static PlayerCtrl instance;
-
+    public GameObject clr;
     
     Rigidbody2D rb;
     public float speed = 10.0f;
@@ -79,6 +79,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             if ((collision.gameObject.layer==12))//enemyBullet 레이어 충돌(총알맞음)
             {
+                clr.SetActive(true);
                 this.gameObject.SetActive(false);
                 this.gameObject.SetActive(true);
                 die();

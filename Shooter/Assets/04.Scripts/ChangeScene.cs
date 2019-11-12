@@ -19,7 +19,7 @@ public class ChangeScene : MonoBehaviour
     }
     public void tyui()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("stage1");
     }
 
     

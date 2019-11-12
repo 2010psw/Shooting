@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
-    private bool pauseNow;
-    private void Start()
-    {
-        pauseNow = false;
-    }
+    
 
 
     public void pause()

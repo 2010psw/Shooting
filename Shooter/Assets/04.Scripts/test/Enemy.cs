@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
         }
     }
     private static Enemy instance;
+    public GameObject clr;
 
     Rigidbody2D rb;
     Transform tr;
@@ -41,6 +42,8 @@ public class Enemy : MonoBehaviour
             if (hp<=0)
             {
                 Debug.Log("죽음");
+                clr.SetActive(true);
+                
             }
             
         }

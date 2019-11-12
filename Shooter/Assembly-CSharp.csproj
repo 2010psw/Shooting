@@ -82,6 +82,7 @@
     <Compile Include="Assets\04.Scripts\UI\JoyStick.cs" />
     <Compile Include="Assets\04.Scripts\UI\JoyStickMovement.cs" />
     <Compile Include="Assets\04.Scripts\UI\MoveBackground.cs" />
+    <Compile Include="Assets\04.Scripts\UI\Pause.cs" />
     <Compile Include="Assets\04.Scripts\UI\PB_Ctrl.cs" />
     <Compile Include="Assets\04.Scripts\UI\PlayerCtrl.cs" />
     <Compile Include="Assets\CircleMoving\example.cs" />

@@ -9,7 +9,7 @@ public class RespawnManager : MonoBehaviour
     public float respawnTime;
     void Start()
     {
-        StartCoroutine(RespawnEnemy());
+        StartRespawn();
     }
 
     // Update is called once per frame
@@ -21,5 +21,14 @@ public class RespawnManager : MonoBehaviour
             float range = (float)Screen.width / (float)Screen.height * Camera.main.orthographicSize;
             Instantiate(obj, respawnTr.position + new Vector3(Random.Range(-range, range), 0, 0), Quaternion.identity);
         }
+    }
+
+    public void StartRespawn()
+    {
+        StartCoroutine(RespawnEnemy());
+    }
+    public void StopRespawn()
+    {
+        StopCoroutine(RespawnEnemy());
     }
 }

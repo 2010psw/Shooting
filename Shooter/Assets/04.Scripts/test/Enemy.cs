@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public int hp;
+    public Slider HP;
     public static Enemy Instance
     {
         get
@@ -25,27 +28,34 @@ public class Enemy : MonoBehaviour
 
     Rigidbody2D rb;
     Transform tr;
-    public int hp;
-    
+
+
 
     void Start()
     {
         tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if ((collision.gameObject.layer == 9))
         {
+            
             hp -= PB_Ctrl.Instance.damage;
-            if (hp<=0)
+            HP.value -= PB_Ctrl.Instance.damage;
+            if (hp <= 0)
             {
                 Debug.Log("죽음");
                 clr.SetActive(true);
-                
+                Time.timeScale = 0;
+
             }
-            
+
         }
+        
     }
 }
+

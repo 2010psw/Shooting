@@ -26,7 +26,7 @@ public class MoveDown : MonoBehaviour
         {
             if ((collision.gameObject.layer == 9))//
             {
-                if (Random.Range(0f, 11f)>8f)
+                if (Random.Range(0f, 11f)>8f)//아이템 드랍 확률
                 {
                     Instantiate(obj, this.gameObject.transform.position, Quaternion.identity);
 

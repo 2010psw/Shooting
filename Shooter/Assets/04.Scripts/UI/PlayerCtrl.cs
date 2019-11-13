@@ -127,6 +127,7 @@ public class PlayerCtrl : MonoBehaviour
         if (ctrl)
         {
             ctrl = false;
+            Time.timeScale = 0;
         }
         else
         {

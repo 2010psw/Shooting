@@ -37,22 +37,22 @@ public class PB_Ctrl : MonoBehaviour
         switch (PlayerCtrl.Instance.level)
         {
             case 0:
-                damage = 100;
+                damage = 10;
                 break;
             case 1:
-                damage = 130;
+                damage = 12;
                 break;
             case 2:
-                damage = 160;
+                damage = 14;
                 break;
             case 3:
-                damage = 190;
+                damage = 17;
                 break;
             case 4:
-                damage = 230;
+                damage = 20;
                 break;
             default:
-                damage = 100;
+                damage = 10;
                 break;
 
         }

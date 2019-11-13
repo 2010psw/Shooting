@@ -10,7 +10,7 @@ public class ItemMove : MonoBehaviour
     public AudioClip Sound2;
     Vector3 a;
     float speed = 1.3f;
-    
+    public GameObject obj;
     void Start()
     {
         a = (Vector3.up + Vector3.right)*speed;
@@ -34,9 +34,10 @@ public class ItemMove : MonoBehaviour
     {
         if ((collision.gameObject.layer == 8))
         {
-            this.Sound.Play();
-            sr.color = new Color(1, 1, 1, 0);
-            Invoke("delete", 2f);
+            
+            Instantiate(obj, tr.position, Quaternion.identity);
+            delete();
+            
         }
 
     }

@@ -36,4 +36,12 @@ public class Bullet : MonoBehaviour
     {
         CancelInvoke();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((collision.gameObject.layer == 15))//enemyBullet 레이어 충돌(총알맞음)
+        {
+            Destroy();
+        }
+    }
 }

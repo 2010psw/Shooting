@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tr: {fileID: 3170398224777455038}
+  rb: {fileID: 0}
   speed: 4
   dir: 8
 --- !u!50 &9084824386164816703

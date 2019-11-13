@@ -6,6 +6,7 @@ public class ChaseMe : MonoBehaviour
 {
     
     public Transform tr;
+    public Rigidbody2D rb;
     public float speed = 10f;
     Vector3 a;
     bool alive;
@@ -30,6 +31,7 @@ public class ChaseMe : MonoBehaviour
         }
         */
         setDir(dir);
+        rb = GetComponent<Rigidbody2D>();
          
     }
     
@@ -104,10 +106,12 @@ public class ChaseMe : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if ((collision.gameObject.layer == 14))//벽 터치
+        if ((collision.gameObject.layer == 14 || collision.gameObject.layer == 15))//벽 터치
         {
             Destroy(this.gameObject);
         }
 
     }
+
+    
 }

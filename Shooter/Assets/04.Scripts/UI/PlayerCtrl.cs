@@ -79,6 +79,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             if ((collision.gameObject.layer==12))//enemyBullet 레이어 충돌(총알맞음)
             {
+                JoyStickMovement.Instance.gameObject.SetActive(false);
                 clr.SetActive(true);
                 this.gameObject.SetActive(false);
                 this.gameObject.SetActive(true);
@@ -87,6 +88,7 @@ public class PlayerCtrl : MonoBehaviour
                 Invoke("MF_Visible", 45 * Time.deltaTime);
                 Invoke("revive", 60 * Time.deltaTime);
                 level = 0;
+
             }
             if ((collision.gameObject.layer == 13))//아이템먹음
             {
